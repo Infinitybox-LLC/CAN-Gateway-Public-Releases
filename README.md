@@ -23,8 +23,6 @@ Download the latest release for your platform from the [Releases](https://github
 2. Move `Infinitybox_CAN_Gateway_Config.app` to Applications
 3. If macOS blocks the app, right-click and select **Open**
 
-The compiled app already includes Python, pyserial, and python-can (the Python PEAK interface). You do **not** install Python packages.
-
 ## First-time setup
 
 ### If you use Grid Connect CANUSB COM FD
@@ -45,11 +43,9 @@ No extra driver install is needed on Windows or macOS.
 
 ### If you use PEAK PCAN-USB
 
-The app already includes the Python PEAK bindings. It does **not** include PEAK’s Windows device driver (`PCANBasic.dll` + kernel driver).
+**Windows:** install PEAK’s Windows device driver from [peak-system.com/Drivers](https://www.peak-system.com/Drivers.523.0.html)
 
-**Windows:** install PEAK’s Windows driver from [peak-system.com/Drivers](https://www.peak-system.com/Drivers.523.0.html) before connecting.
-
-**macOS:** PEAK does **not** publish a macOS driver. To use a PCAN-USB on a Mac, install the third-party [MacCAN PCBUSB](https://github.com/mac-can/PCBUSB-Library/releases) library. Grid Connect is the simpler Mac path.
+**macOS:** PEAK does not publish a Mac driver. Use Grid Connect on a Mac.
 
 ## Requirements
 
