@@ -25,27 +25,7 @@ Download the latest release for your platform from the [Releases](https://github
 
 ## First-time setup
 
-### If you use Grid Connect CANUSB COM FD
-
-No extra driver install is needed on Windows or macOS.
-
-**Windows (once per adapter):**
-1. Plug in the adapter
-2. Open **Device Manager** → **Ports (COM & LPT)**
-3. Open **USB Serial Port (COMxx)** → **Port Settings**
-4. Set **Bits per second** to **115200**
-5. Click **OK**
-
-**macOS:**
-1. Plug in the adapter
-2. In the tool, click **Refresh**
-3. Select a `/dev/cu.usbserial-*` port
-
-### If you use PEAK PCAN-USB
-
-**Windows:** install PEAK’s Windows device driver from [peak-system.com/Drivers](https://www.peak-system.com/Drivers.523.0.html)
-
-**macOS:** PEAK does not publish a Mac driver. Use Grid Connect on a Mac.
+If you're using PEAK Diagnostic CAN tool, please install PEAK's Windows device driver from [peak-system.com/Drivers](https://www.peak-system.com/Drivers.523.0.html).
 
 ## Requirements
 
