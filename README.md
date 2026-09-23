@@ -23,16 +23,40 @@ Download the latest release for your platform from the [Releases](https://github
 2. Move `Infinitybox_CAN_Gateway_Config.app` to Applications
 3. If macOS blocks the app, right-click and select **Open**
 
+## First-time setup
+
+The compiled app includes Python and the communication libraries. It does **not** include PEAK kernel drivers.
+
+### If you use Grid Connect CANUSB COM FD
+
+No PEAK driver install is needed on Windows or macOS.
+
+**Windows (once per adapter):**
+1. Plug in the adapter
+2. Open **Device Manager** → **Ports (COM & LPT)**
+3. Open **USB Serial Port (COMxx)** → **Port Settings**
+4. Set **Bits per second** to **115200**
+5. Click **OK**
+
+**macOS:**
+1. Plug in the adapter
+2. In the tool, click **Refresh**
+3. Select a `/dev/cu.usbserial-*` port
+
+### If you use PEAK PCAN-USB
+
+Install the PEAK driver for your OS **before** opening the tool. This is required on **both Windows and macOS** — the app cannot talk to the dongle without it.
+
+1. Download the driver package from [peak-system.com/Drivers](https://www.peak-system.com/Drivers.523.0.html)
+2. Install the Windows or macOS package that matches your computer
+3. Plug in the PCAN-USB
+4. In the tool, choose **PCAN-USB (PEAK)** and select the channel (usually `PCAN_USBBUS1`)
+
 ## Requirements
 
-- **Hardware**: Infinitybox CAN Gateway, plus a Grid Connect CANUSB COM FD adapter **or** a PEAK PCAN-USB adapter
-- **Windows**: Windows 10 or later
-- **macOS**: 10.15+ (Catalina or later)
-- **PCAN-USB**: PEAK drivers from [peak-system.com](https://www.peak-system.com/Drivers.523.0.html)
-
-## First-time Grid Connect setup (Windows)
-
-Set the COM port to **115200** baud once per adapter in Device Manager → Ports → USB Serial Port → Port Settings.
+- Infinitybox CAN Gateway
+- Grid Connect CANUSB COM FD **or** PEAK PCAN-USB
+- Windows 10 or later, **or** macOS 10.15+ (Catalina or later)
 
 ## About
 
